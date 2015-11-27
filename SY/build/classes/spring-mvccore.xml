@@ -22,6 +22,10 @@
          </property>
      </bean>
 
+    
+    
+    
+    
 	<!-- 数据源 -->
 	<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClass}"></property>
@@ -50,6 +54,11 @@
 		<property name="basePackage" value="com.sy.mappdao"></property>
 		<property name="sqlSessionTemplateBeanName" value="template"></property>
 	</bean>
+	
+	<!-- 防止html,css,js 等被过滤掉 -->
+	<mvc:default-servlet-handler/>
+	
+	
 	
 	
 </beans>

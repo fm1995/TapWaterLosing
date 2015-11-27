@@ -1,6 +1,6 @@
 # TapWater
 自来水项目
-SpringMVC+MyBatis(Y2_HR)
+SpringMVC+MyBatis(SY)
 
 =========================
 ============
@@ -14,7 +14,8 @@ SpringMVC+MyBatis(Y2_HR)
 * Windows: win10
 * Other:  
 ---------
-
+sql
+* [Github link](https://github.com/fm1995/TapWater/blob/master/SY/SyDataBase/sy.sql)sy.sql
 sAbout
 -----------------------------------
 * [Github link](https://github.com/xu-long)	 xu-long
