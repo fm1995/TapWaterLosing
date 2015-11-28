@@ -478,4 +478,37 @@
       user_disabled = #{userDisabled,jdbcType=BIT}
     where user_no = #{userNo,jdbcType=VARCHAR}
   </update>
+  
+  
+ <!-- ====================自定义查询语句 -->
+	<select id="selectYSList" parameterType="map" resultMap="BaseResultMap">
+		select * from us_user 	    
+		<where>
+		    user_money > 0
+		    <if test="userMoney != null ">
+		      and user_money > #{userMoney}
+		    </if>
+		</where>
+		limit #{start} , #{rows}
+	</select>
+	<select id="selectYSListCount" parameterType="map" resultType="int">
+		select count(*) from us_user 	    
+		<where>
+		     user_money > 0
+		    <if test="userMoney != null ">
+		      and user_money > #{userMoney}
+		    </if>
+		</where>
+	</select>
+	<select id="selectYSMonenys" parameterType="map" resultType="java.lang.Double">
+		select sum(user_money) from us_user 	    
+		<where>
+		     user_money > 0
+		    <if test="userMoney != null ">
+		      and user_money > #{userMoney}
+		    </if>
+		</where>
+	</select>
+	
+	
 </mapper>

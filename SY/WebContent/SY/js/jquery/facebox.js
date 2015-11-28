@@ -339,7 +339,6 @@ function showWindow(options) {
 	window.showWindow_options = opt;
 	
 	
-
 	if(window.ActiveXObject){//IE浏览器	
 		return window.showModalDialog("../js/showWindow.html", window
 			, "dialogHeight:" + opt.height + "px;dialogWidth:" + opt.width + "px;");

@@ -40,7 +40,7 @@ public class GetEncodingFilter implements Filter{
 			String[] values = map.get(key);
 			for (int i = 0; i < values.length; i++) {
 				try {
-					values[i]=new String(values[i].getBytes("ios-8859-1"),"utf-8");
+					values[i]=new String(values[i].getBytes("iso-8859-1"),"utf-8");
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
 				}

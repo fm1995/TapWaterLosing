@@ -2,7 +2,9 @@ package com.sy.mappdao;
 
 import com.sy.entity.UsUser;
 import com.sy.entity.UsUserExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface UsUserMapper {
@@ -27,4 +29,11 @@ public interface UsUserMapper {
     int updateByPrimaryKeySelective(UsUser record);
 
     int updateByPrimaryKey(UsUser record);
+
+    //==========================自定义查询语句
+	List<UsUser> selectYSList(@Param("start")int start,@Param("rows") int rows,@Param("userMoney") Integer userMoney);
+
+	int selectYSListCount(@Param("start")int start,@Param("rows") int rows,@Param("userMoney") Integer userMoney);
+	
+	Double selectYSMonenys(@Param("start")int start,@Param("rows") int rows,@Param("userMoney") Integer userMoney);
 }

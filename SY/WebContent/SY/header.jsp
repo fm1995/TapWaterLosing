@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <div id="header">
 		<div class="content_pad">
 			<h1><a href="./workspace.html">湖南省自来水公司营销管理信息系统</a></h1>
@@ -81,8 +80,8 @@
 							<li><a href="/SY/SY/page/pay_reportDebts.html">欠费报表</a></li>	
 							<li><a href="/SY/SY/page/pay_reportPay.html">收费情况报表</a></li>	
 							<li><a href="/SY/SY/page/pay_reportMonthRecycle.html">月资金回收情况报表</a></li>	
-							<li><a href="/SY/SY/page/pay_reportBalance.html">用户预收情况报表</a></li>	
-							<li><a href="/SY/SY/page/pay_reportWaterType.html">各类用水统计总表</a></li>
+							<li><a href="/SY/report/yushou">用户预收情况报表</a></li>	
+							<li><a href="/SY/report/tongji">各类用水统计总表</a></li>
 						</ul>
 						
 					</div>
