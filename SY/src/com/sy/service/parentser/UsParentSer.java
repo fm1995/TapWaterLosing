@@ -10,7 +10,8 @@ import com.sy.mappdao.UsSmsMapper;
 import com.sy.mappdao.UsUserMapper;
 
 @Service
-public class UsParentSer {
+public class UsParentSer{
+	
 	// Us系列
 	@Autowired
 	protected UsFormulaMapper usFormulaMapper;
@@ -19,6 +20,7 @@ public class UsParentSer {
 	@Autowired
 	protected UsSmsMapper usSmsMapper;
 	@Autowired
-	protected UsUserMapper usUserMapper;
+	public  UsUserMapper usUserMapper;
+	
  
 }

@@ -74,14 +74,14 @@
 					
 					<div class="nav_menu">			
 						<ul>
-							<li><a href="/SY/SY/page/pay_window.jsp">窗口收费</a></li>	
-							<li><a href="/SY/SY/page/pay_batch.html">批量收费</a></li>
-							<li><a href="/SY/SY/page/pay_invoiceReprint.html">发票补开/作废</a></li>	
-							<li><a href="/SY/SY/page/pay_reportDebts.html">欠费报表</a></li>	
-							<li><a href="/SY/SY/page/pay_reportPay.html">收费情况报表</a></li>	
-							<li><a href="/SY/SY/page/pay_reportMonthRecycle.html">月资金回收情况报表</a></li>	
-							<li><a href="/SY/report/yushou">用户预收情况报表</a></li>	
-							<li><a href="/SY/report/tongji">各类用水统计总表</a></li>
+							<li><a href="/TapWater/sy/page/pay_window.jsp">窗口收费</a></li>	
+							<li><a href="/TapWater/sy/page/pay_batch.html">批量收费</a></li>
+							<li><a href="/TapWater/sy/page/pay_invoiceReprint.html">发票补开/作废</a></li>	
+							<li><a href="/TapWater/sy/page/pay/TapWater/sy/Debts.html">欠费报表</a></li>	
+							<li><a href="/TapWater/sy/page/pay_reportPay.html">收费情况报表</a></li>	
+							<li><a href="/TapWater/sy/page/pay_reportMonthRecycle.html">月资金回收情况报表</a></li>	
+							<li><a href="/TapWater/report/yushou">用户预收情况报表</a></li>	
+							<li><a href="/TapWater/report/tongji">各类用水统计总表</a></li>
 						</ul>
 						
 					</div>
@@ -92,7 +92,7 @@
 					
 					<div class="nav_menu">			
 						<ul>
-							<li><a href="/SY/SY/page/inv_invoiceManage.html">发票总表</a></li>
+							<li><a href="/TapWater/sy/page/inv_invoiceManage.html">发票总表</a></li>
 							<li><a href="./page/inv_invoiceIn.html">发票入库</a></li>	
 							<li><a href="./page/inv_invoiceOut.html">发票出库</a></li>
 							<li><a href="./page/inv_invoiceArchive.html">发票交票</a></li>

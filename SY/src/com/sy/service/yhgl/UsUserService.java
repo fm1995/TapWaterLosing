@@ -14,7 +14,7 @@ import com.sy.service.parentser.UsParentSer;
  
 @Service
 public class UsUserService extends UsParentSer implements ParentSerI<UsUser>{
-
+	
 	public void text() {
 		System.out.println("text。。。");
 		List<UsSms> selAll = usSmsMapper.selAll();
@@ -65,24 +65,19 @@ public class UsUserService extends UsParentSer implements ParentSerI<UsUser>{
 		return usUserMapper.selectYSListCount( page,  rows, userMoney);
 	}
 	public Map<String,Object> yushou(int page, int rows, Integer userMoney){
-		System.out.println("page:"+page+" rows："+rows+"  userMoney："+userMoney);
 		int total = this.selectYSListCount((page - 1) * rows,  rows, userMoney);
 		List<UsUser> users=usUserMapper.selectYSList((page - 1) * rows,rows,userMoney);
 	
 		Double moneys = usUserMapper.selectYSMonenys((page - 1) * rows,  rows, userMoney);
 		System.out.println("moneys: ="+moneys);
-		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("total", total);
 		map.put("rows", users);
 		map.put("moneys", moneys==null?moneys:0.0);
 		map.put("userMoney", userMoney);
-		
 		int pageCount=(int) Math.ceil(total/(rows*1.0));
-		System.out.println("总数： count: "+total + " rows: "+rows + "  pageCount: "+ pageCount);
 		map.put("page", page);
 		map.put("pageCount", pageCount);
-		
 		return map;
 	}
 	

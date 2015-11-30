@@ -26,7 +26,7 @@ public class ReportController extends PyController{
 	public String yushou(Report report,HttpServletRequest request){
 		Map<String, Object> map = usUserService.yushou(report.getPage(), report.getRows(), report.getUserMoney());
 		request.setAttribute("map", map);
-		return "/SY/page/pay_reportBalance.jsp";
+		return "/sy/page/pay_reportBalance.jsp";
 	}
 	
 	//各类用水统计总表
@@ -34,7 +34,8 @@ public class ReportController extends PyController{
 	public String tongji(){
 		System.out.println("tongji...");
 		
-		return "/SY/page/pay_reportWaterType.jsp";
+		
+		return "/sy/page/pay_reportWaterType.jsp";
 	}
 	
 }

@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
 	<title>湖南省自来水公司营销管理信息系统</title> 
 	
-	<%@include file="../style.jsp" %>
+	<%@include file="/sy/style.jsp" %>
 	<style type="text/css">
 	table.report th,table.report td { padding:10px; font-size:14px; }
 	</style>
@@ -17,7 +17,7 @@
 
 <div id="wrapper">
 	
-	<%@include file="../header.jsp" %>
+	<%@include file="/sy/header.jsp" %>
 	
 	<div id="masthead">
 		<div>
