@@ -4,6 +4,7 @@ package com.sy.service.parentser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sy.mappdao.PyBillMapper;
 import com.sy.mappdao.UsFormulaMapper;
 import com.sy.mappdao.UsMeterMapper;
 import com.sy.mappdao.UsSmsMapper;
@@ -20,7 +21,10 @@ public class UsParentSer{
 	@Autowired
 	protected UsSmsMapper usSmsMapper;
 	@Autowired
-	public  UsUserMapper usUserMapper;
+	protected  UsUserMapper usUserMapper;
+	@Autowired
+	protected  PyBillMapper pyBillMapper;
 	
  
+	
 }

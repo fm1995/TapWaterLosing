@@ -48,7 +48,23 @@ public class UsUser {
 
     private Boolean userDisabled;
 
-    public String getUserNo() {
+    
+    @Override
+	public String toString() {
+		return "UsUser [userNo=" + userNo + ", userName=" + userName + ", abc="
+				+ abc + ", createDate=" + createDate + ", address=" + address
+				+ ", phone=" + phone + ", smsPhone=" + smsPhone + ", areaId="
+				+ areaId + ", userType=" + userType + ", payType=" + payType
+				+ ", bankName=" + bankName + ", bankNum=" + bankNum
+				+ ", formula=" + formula + ", userMoney=" + userMoney
+				+ ", meterId=" + meterId + ", docNum=" + docNum + ", pwd="
+				+ pwd + ", contractNum=" + contractNum + ", contractDate="
+				+ contractDate + ", volumeId=" + volumeId
+				+ ", volumeOrderIndex=" + volumeOrderIndex + ", userDisabled="
+				+ userDisabled + "]";
+	}
+
+	public String getUserNo() {
         return userNo;
     }
 

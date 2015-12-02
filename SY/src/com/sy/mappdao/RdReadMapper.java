@@ -27,4 +27,8 @@ public interface RdReadMapper {
     int updateByPrimaryKeySelective(RdRead record);
 
     int updateByPrimaryKey(RdRead record);
+
+    
+    
+	Integer selectAmountsByYearAndMonth(@Param("ymonth")String ymonth);
 }

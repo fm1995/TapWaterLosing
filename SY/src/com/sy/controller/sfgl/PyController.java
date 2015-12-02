@@ -2,12 +2,12 @@ package com.sy.controller.sfgl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.sy.service.yhgl.UsUserService;
+import com.sy.service.sfgl.SYCostTypeService;
+import com.sy.service.sfgl.UsUserService;
 
 /**
- * 鏀惰垂绠＄悊
+ * 收费管理
  * @author BarryLiu
  *
  */
@@ -16,5 +16,8 @@ public class PyController {
 	
 	@Autowired
 	protected UsUserService usUserService;
+	
+	@Autowired
+	protected SYCostTypeService syCostTypeService;
 	
 }

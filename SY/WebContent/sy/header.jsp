@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <div id="header">
 		<div class="content_pad">
-			<h1><a href="./workspace.html">湖南省自来水公司营销管理信息系统</a></h1>
+			<h1><a href="/TapWater/sy/workspace.jsp">湖南省自来水公司营销管理信息系统</a></h1>
 			
 			<ul id="nav">
 				
@@ -79,7 +79,7 @@
 							<li><a href="/TapWater/sy/page/pay_invoiceReprint.html">发票补开/作废</a></li>	
 							<li><a href="/TapWater/sy/page/pay/TapWater/sy/Debts.html">欠费报表</a></li>	
 							<li><a href="/TapWater/sy/page/pay_reportPay.html">收费情况报表</a></li>	
-							<li><a href="/TapWater/sy/page/pay_reportMonthRecycle.html">月资金回收情况报表</a></li>	
+							<li><a href="/TapWater/report/monthRecycle">月资金回收情况报表</a></li>	
 							<li><a href="/TapWater/report/yushou">用户预收情况报表</a></li>	
 							<li><a href="/TapWater/report/tongji">各类用水统计总表</a></li>
 						</ul>

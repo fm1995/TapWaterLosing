@@ -6,14 +6,14 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
 	<title>湖南省自来水公司营销管理信息系统</title> 
 	 
-	<%@include file="../style.jsp" %>
+	<%@include file="/sy/style.jsp" %>
 </head> 
  
 <body> 
 
 <div id="wrapper">
 	
-	<%@include file="../header.jsp" %>
+	<%@include file="/sy/header.jsp" %>
 	<div id="masthead">
 		<div>
 			<span id="pagetitle"><a href="javascript:;">用户预收费情况报表</a></span>
@@ -127,10 +127,9 @@
 
 <script type="text/javascript">
 	
-$(document).ready ( function () 
+$(document).ready(function()
 {
 	Dashboard.init ();
-	
 });
 
 

@@ -9,7 +9,7 @@ import com.sy.entity.UsUser;
  * @author BarryLiu
  *
  */
-public class Report {
+public class SfglDto {
 	
 	
 	private Integer page =1;
@@ -17,14 +17,11 @@ public class Report {
 	
 	
 	private Integer userMoney;
-	private List<UsUser> usUsers;
-
-	
 	
 	@Override
 	public String toString() {
 		return "Report [page=" + page + ", rows=" + rows + ", userMoney="
-				+ userMoney + ", usUsers=" + usUsers + "]";
+				+ userMoney + "]";
 	}
 
 	public Integer getUserMoney() {
@@ -51,12 +48,5 @@ public class Report {
 		this.rows = rows;
 	}
 
-	public List<UsUser> getUsUsers() {
-		return usUsers;
-	}
-
-	public void setUsUsers(List<UsUser> usUsers) {
-		this.usUsers = usUsers;
-	}
 	
 }

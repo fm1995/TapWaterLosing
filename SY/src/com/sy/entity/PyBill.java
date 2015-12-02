@@ -20,7 +20,16 @@ public class PyBill {
 
     private Date balanceDate;
 
-    public String getBillNo() {
+    
+    @Override
+	public String toString() {
+		return "PyBill [billNo=" + billNo + ", readId=" + readId + ", userNo="
+				+ userNo + ", createDate=" + createDate + ", billMoney="
+				+ billMoney + ", realMoney=" + realMoney + ", balance="
+				+ balance + ", balanceDate=" + balanceDate + "]";
+	}
+
+	public String getBillNo() {
         return billNo;
     }
 

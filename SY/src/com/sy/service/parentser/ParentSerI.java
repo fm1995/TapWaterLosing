@@ -3,41 +3,41 @@ package com.sy.service.parentser;
 import java.util.List;
 
 /**
- * Service çš„çˆ¶ç±»æ¥å£ å¯ä»¥å®ç°è¯¥æ¥å£ 
- * å®ç°è¯¥æ¥å£,å°±è¦ä»¥ T ç±»ä¸ºä¸»è¦çš„æ“ä½œå¯¹è±¡
+ * Service µÄ¸¸Àà½Ó¿Ú ¿ÉÒÔÊµÏÖ¸Ã½Ó¿Ú 
+ * ÊµÏÖ¸Ã½Ó¿Ú,¾ÍÒªÒÔ T ÀàÎªÖ÷ÒªµÄ²Ù×÷¶ÔÏó
  * @author BarryLiu
- * @param <T> é’ˆå¯¹å“ªä¸ª entity çš„Service 
+ * @param <T> Õë¶ÔÄÄ¸ö entity µÄService 
  */
 public interface ParentSerI<T>{
 
 	/**
-	 * æŸ¥è¯¢å…¨éƒ¨
+	 * ²éÑ¯È«²¿
 	 * @return
 	 */
 	List<T> getAll();
 	/**
-	 * æ ¹æ®idæŸ¥è¯¢
+	 * ¸ù¾İid²éÑ¯
 	 * @param id
 	 * @return
 	 */
 	T selectByPrimaryKey(String id);
 
 	/**
-	 * æ’å…¥ä¸€æ¡è®°å½•
+	 * ²åÈëÒ»Ìõ¼ÇÂ¼
 	 * @param entity
 	 * @return
 	 */
 	int insert(T entity);
 
 	/**
-	 * ä¿®æ”¹
+	 * ĞŞ¸Ä
 	 * @param entity
 	 * @return
 	 */
 	int update(T entity);
 
 	/**
-	 * æ ¹æ®idåˆ é™¤
+	 * ¸ù¾İidÉ¾³ı
 	 * @param id
 	 * @return
 	 */

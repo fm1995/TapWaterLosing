@@ -20,9 +20,32 @@ table.billlist tr.selected td { background-color:#333; color:#ff0; }
 .second,.second td,.second th { font-size:12px; }
 </style>
 <script type="text/javascript">
-//查询用户
-function findUser(){
-	showWindow({url:'sys_selectUser.html'});
+$(function(){ //查询用户
+	$("#btnSel").click(function(){
+
+		var args = {
+				"userNo":$("input[name=userNo]").val(),
+				"abc": $("input[name=abc]").val(),		
+				"smsPhone": $("input[name=smsPhone]").val(),		
+				"phone": $("input[name=phone]").val(),		
+				"docNum": $("input[name=docNum]").val(),		
+				"userName": $("input[name=userName]").val(),		
+				"address": $("input[name=address]").val(),		
+		};
+		$.get("/TapWater/paywindow/selectUser",args,function(x){
+			var no=showWindow({url:'/TapWater/sy/page/sys_selectUser.jsp'});
+			if(no==undefined)
+			return ;
+			findUserById(no);
+		}); 
+	});
+	
+	window.noUser=function(){
+		alert('没有用户登录');
+	}
+})
+function findUserById(no){
+	location.href="/TapWater/paywindow/selectUserByUserNo?userNo="+no;
 }
 //交费
 function pay(){
@@ -47,6 +70,16 @@ function reInvoice(){
  
 <body> 
 
+	<c:if test="${user==null }">
+		<script type="text/javascript">
+			//没有选择用户
+			$(function(){
+				//$(".pay").hide();
+				//$("#cqzd").hide();
+			});
+		</script>
+	</c:if>
+	
 <div id="wrapper">
 	
 	<%@include file="../header.jsp" %>
@@ -82,35 +115,35 @@ function reInvoice(){
 		
 			<!------------------------------------- 查询 --------------------------------------------->
 			<h3>查询</h3>
-			
+			<form action="" name="frm"  method="post">
 			<table>
 				<tr>
 					<td>用户编码</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="userNo" /> </td>
 					<td>用户简码</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="abc"/> </td>
 					<td>短信电话</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="smsPhone"/> </td>
 					<td>联系电话</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="phone"/> </td>
 					<td></td>
 				</tr>
 				<tr>
 					<td>档案编号</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="docNum" /> </td>
 					<td>用户姓名</td>
-					<td><input size="16"/> </td>
+					<td><input size="16" name="userName"/> </td>
 					<td>联系地址</td>
-					<td colspan="4"><input size="16" />
+					<td colspan="4"><input size="16" name="address"/>
 						<a href="javascript:;" class="btn btn-icon btn-small btn-find btn-blue"
-						  onclick="findUser();"><span></span>查询</a>
+						   id="btnSel"><span></span>查询</a>
 						<a href="../page/user_search1.html?id=0100000987" target="_blank" 
 							class="btn btn-icon btn-small btn-person btn-blue"><span></span>详情</a>
 						<a href="javascript:;" class="btn btn-icon btn-small btn-refresh"><span></span>重置</a>
 					</td>
 				</tr>
-				
 			</table>	
+			</form>
 			<br/>
 			
 			
@@ -164,7 +197,7 @@ function reInvoice(){
 			<div style="float:left;width:45%;">
 			
 			<h3>陈欠账单</h3>
-			<table class="data display billlist">
+			<table class="data display billlist" id="cqzd">
 				<thead>
 					<tr>
 						<th>水费单</th>
@@ -671,22 +704,11 @@ function reInvoice(){
 	
 </div> <!-- #wrapper -->
 
-<script src="../js/jquery/jquery-1.5.2.min.js"></script>
-<script src="../js/jquery/jquery-ui-1.8.12.custom.min.js"></script>
-<script src="../js/misc/excanvas.min.js"></script>
-<script src="../js/jquery/facebox.js"></script>
-<script src="../js/jquery/jquery.visualize.js"></script>
-<script src="../js/jquery/jquery.dataTables.min.js"></script>
-<script src="../js/jquery/jquery.tablesorter.min.js"></script>
-<script src="../js/jquery/jquery.uniform.min.js"></script>
-<script src="../js/jquery/jquery.placeholder.min.js"></script>
 
-<script src="../js/widgets.js"></script>
-<script src="../js/dashboard.js"></script>
 
 <script type="text/javascript">
 	
-$(document).ready ( function () 
+$(document).ready(function() 
 {
 	Dashboard.init ();
 	

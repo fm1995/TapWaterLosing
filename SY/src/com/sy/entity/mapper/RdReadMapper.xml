@@ -431,4 +431,14 @@
       audit_date = #{auditDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  
+  
+  
+  
+  
+  <select id="selectAmountsByYearAndMonth" parameterType="map" resultType="java.lang.Integer">
+		SELECT sum(amount) FROM rd_read
+			where  date_format(read_date,'%Y%m%d') like  '%'#{ymonth}'%'  
+  </select>
 </mapper>

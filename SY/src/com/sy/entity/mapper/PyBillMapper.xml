@@ -256,4 +256,29 @@
       balance_date = #{balanceDate,jdbcType=TIMESTAMP}
     where bill_no = #{billNo,jdbcType=VARCHAR}
   </update>
+  
+  
+    <!-- 以月份分组，并查询当前月份应交金额和实交金额总和 ,用List<PyBill>集合保存-->
+  <!-- 逻辑，查出最晚的7个月份，并按月份从早到晚排序 -->
+  <select id="sumBillReal" resultMap="BaseResultMap">
+  	select * from 
+		(SELECT date_format(create_date,'%Y年%m月') 'bill_no',
+				sum(bill_money) 'bill_money',
+				sum(real_money) 'real_money',
+				create_date 
+				FROM sy.py_bill where create_date is not null 
+						group by date_format(create_date,'%Y年%m月') 
+						order by create_date desc limit 7) ta
+        	order by ta.create_date asc
+  </select>
+
+  
+  <select id="selectBillMoneysByCreateTime" parameterType="map" resultType="double">
+		SELECT sum(bill_money) FROM sy.py_bill
+		  	where date_format(create_date,'%Y%m%d') like '%'#{ymonth}'%'        
+  </select>
+  <select id="selectRealMoneysByCreateTime" parameterType="map" resultType="double">
+		SELECT sum(real_money) FROM sy.py_bill
+			where date_format(create_date,'%Y%m%d') like '%'#{ymonth}'%'    
+  </select>
 </mapper>

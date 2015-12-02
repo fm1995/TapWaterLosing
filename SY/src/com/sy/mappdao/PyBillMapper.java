@@ -2,7 +2,9 @@ package com.sy.mappdao;
 
 import com.sy.entity.PyBill;
 import com.sy.entity.PyBillExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface PyBillMapper {
@@ -27,4 +29,12 @@ public interface PyBillMapper {
     int updateByPrimaryKeySelective(PyBill record);
 
     int updateByPrimaryKey(PyBill record);
+    
+    
+    
+    List<PyBill> sumBillReal();
+
+	Double selectBillMoneysByCreateTime(@Param("ymonth")String ymonth);
+
+	Double selectRealMoneysByCreateTime(@Param("ymonth")String ymonth);
 }

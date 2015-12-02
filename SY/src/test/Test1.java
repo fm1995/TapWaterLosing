@@ -11,7 +11,7 @@ public class Test1 {
 		
 		//test1(cxt);
 		UsParentSer servicep = (UsParentSer) cxt.getBean("usParentSer");
-		System.out.println("++"+servicep.usUserMapper);
+		System.out.println("++"+servicep);
 		UsParentSer service = (UsParentSer) cxt.getBean("usUserService");
 		System.out.println(service);
 		
